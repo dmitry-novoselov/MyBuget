@@ -1,0 +1,126 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{B21D31A5-AD51-4779-B697-4BF02AF6FC00}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Tests</RootNamespace>
+    <AssemblyName>Tests</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Moq, Version=3.0.308.2, Culture=neutral, PublicKeyToken=69f491c39445e920, processorArchitecture=MSIL" />
+    <Reference Include="nunit.framework">
+      <HintPath>..\packages\NUnit.2.6.2\lib\nunit.framework.dll</HintPath>
+    </Reference>
+    <Reference Include="StructureMap, Version=2.5.3.0, Culture=neutral, PublicKeyToken=e60ad81abae3c223, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\MyBudget\lib\StructureMap.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Presentation\CalculationDataProviderExtensions.cs" />
+    <Compile Include="DateExtentions.cs" />
+    <Compile Include="Domain\BudgetCalculationTests.cs" />
+    <Compile Include="Domain\CalculationDataPreprocessorTests.cs" />
+    <Compile Include="Domain\ExpenseItemTests.cs" />
+    <Compile Include="Infrastructure\DataContainerTests.cs" />
+    <Compile Include="Domain\PeriodTests.cs" />
+    <Compile Include="Domain\DatedSetTests.cs" />
+    <Compile Include="Domain\YearMonthTests.cs" />
+    <Compile Include="FixtureBase.cs" />
+    <Compile Include="Infrastructure\BinderTests.cs" />
+    <Compile Include="Infrastructure\CalculationDataProviderTests.cs" />
+    <Compile Include="Infrastructure\Fakes\DataObject.cs" />
+    <Compile Include="Infrastructure\MementoTests.cs" />
+    <Compile Include="Presentation\AddInvestmentUseCaseTests.cs" />
+    <Compile Include="Presentation\AddExpenseUseCaseTests.cs" />
+    <Compile Include="Presentation\AddMonthlyCashStatementCategoryUseCaseTests.cs" />
+    <Compile Include="Presentation\AddMonthlyCashMovementUseCaseTests.cs" />
+    <Compile Include="Presentation\EditDataUseCaseFixtureBase.cs" />
+    <Compile Include="Presentation\EditExpenseItemUseCaseTests.cs" />
+    <Compile Include="Presentation\EditingTests\WhenEditMonthlyCashMovement.cs" />
+    <Compile Include="Presentation\EditingTests\WhenEditCashStatement.cs" />
+    <Compile Include="Presentation\EditPlanningSettingsUseCaseTests\WhenDisplayingEditPlanningSettings.cs" />
+    <Compile Include="Presentation\EditPlanningSettingsUseCaseTests\EditPlanningSettingsUseCaseTestsBase.cs" />
+    <Compile Include="Presentation\EditPlanningSettingsUseCaseTests\WhenEditBottomLine.cs" />
+    <Compile Include="Presentation\EditPlanningSettingsUseCaseTests\WhenEditDateOfLeave.cs" />
+    <Compile Include="Presentation\EditPlanningSettingsUseCaseTests\WhenEditedCalculationPeriod.cs" />
+    <Compile Include="Presentation\EditPlanningSettingsUseCaseTests\WhenEditedEnvelopeSize.cs" />
+    <Compile Include="Presentation\EditPlanningSettingsUseCaseTests\WhenEditedInitialRemainder.cs" />
+    <Compile Include="Presentation\Fakes\DataGridFake.cs" />
+    <Compile Include="Presentation\Fakes\EditExpenseItemViewFake.cs" />
+    <Compile Include="Presentation\Fakes\EditMonthlyExpenseViewFake.cs" />
+    <Compile Include="Presentation\Fakes\EditTransferViewFake.cs" />
+    <Compile Include="Presentation\Fakes\ModelViewFake.cs" />
+    <Compile Include="Presentation\Fakes\ShowCalculationViewFake.cs" />
+    <Compile Include="Presentation\PEBudgetRowTests.cs" />
+    <Compile Include="Presentation\PEMonthlyExpenseTests.cs" />
+    <Compile Include="Presentation\PESelectableExpenseItemTests.cs" />
+    <Compile Include="Presentation\SetRemainderUseCaseTests.cs" />
+    <Compile Include="Presentation\ShowCalculationUseCaseTests\ShowCalculationUseCaseTestsBase.cs" />
+    <Compile Include="Presentation\ShowCalculationUseCaseTests\WhenDisplayingShowCalculationUseCase.cs" />
+    <Compile Include="Presentation\ShowCalculationUseCaseTests\WhenStartEditingRow.cs" />
+    <Compile Include="_\Dsl\PeriodBuilder.cs" />
+    <Compile Include="_\Fakes\BudgetFake.cs" />
+    <Compile Include="_\Fakes\BudgetServiceFake.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Presentation\ShowCalculationUseCaseTests\ShowCalculationUseCaseTests_Fixture.cs" />
+    <Compile Include="_\Fakes\PersistentStorageFake.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="ProsAndCons.txt" />
+    <Content Include="TODO.txt" />
+    <Content Include="_\lib\Moq.dll" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Budget\Budget.csproj">
+      <Project>{DD02B743-B034-4E61-8694-5B7C4431F02C}</Project>
+      <Name>Budget</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

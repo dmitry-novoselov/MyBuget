@@ -1,0 +1,215 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{DD02B743-B034-4E61-8694-5B7C4431F02C}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Budget</RootNamespace>
+    <AssemblyName>Budget</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+    <SourceAnalysisOverrideSettingsFile>C:\Users\danovose\AppData\Roaming\ICSharpCode/SharpDevelop4.0\Settings.SourceAnalysis</SourceAnalysisOverrideSettingsFile>
+    <SignAssembly>False</SignAssembly>
+    <DelaySign>False</DelaySign>
+    <RunPostBuildEvent>OnBuildSuccess</RunPostBuildEvent>
+    <AllowUnsafeBlocks>False</AllowUnsafeBlocks>
+    <NoStdLib>False</NoStdLib>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <RunCodeAnalysis>False</RunCodeAnalysis>
+    <RunSourceAnalysis>False</RunSourceAnalysis>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>Full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <CheckForOverflowUnderflow>False</CheckForOverflowUnderflow>
+    <StartAction>Project</StartAction>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Platform)' == 'AnyCPU' ">
+    <RegisterForComInterop>False</RegisterForComInterop>
+    <GenerateSerializationAssemblies>Auto</GenerateSerializationAssemblies>
+    <BaseAddress>4194304</BaseAddress>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="StructureMap, Version=2.5.3.0, Culture=neutral, PublicKeyToken=e60ad81abae3c223, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\MyBudget\lib\StructureMap.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Domain\Budget.cs" />
+    <Compile Include="Domain\BudgetCalculation.cs" />
+    <Compile Include="Domain\CalculationDataPreprocessor.cs" />
+    <Compile Include="Domain\DateTimeService.cs" />
+    <Compile Include="Domain\MonthlyCashStatement.cs" />
+    <Compile Include="Domain\IBudget.cs" />
+    <Compile Include="Domain\IBudgetService.cs" />
+    <Compile Include="Domain\ICalculationDataProvider.cs" />
+    <Compile Include="Domain\IDataDeletionService.cs" />
+    <Compile Include="Domain\IDataSavingService.cs" />
+    <Compile Include="Domain\WalletCalculator.cs" />
+    <Compile Include="Infrastructure\DataContainer2.cs" />
+    <Compile Include="Infrastructure\IMemento.cs" />
+    <Compile Include="Infrastructure\Binder.cs" />
+    <Compile Include="Infrastructure\BudgetService.cs" />
+    <Compile Include="Infrastructure\CalculationDataProvider.cs" />
+    <Compile Include="Infrastructure\DataGrid.cs" />
+    <Compile Include="Domain\YearMonth.cs" />
+    <Compile Include="Domain\MonthlyCashStatementCategory.cs" />
+    <Compile Include="Domain\Period.cs" />
+    <Compile Include="Infrastructure\Memento.cs" />
+    <Compile Include="Infrastructure\VersionedMemento.cs" />
+    <Compile Include="Presentation\AddExpenseItemUseCase\AddExpenseItemUseCase.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Presentation\AddExpenseItemUseCase\IAddExpenseItemUseCase.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Presentation\AddExpenseUseCase\AddExpenseUseCase.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Presentation\AddExpenseUseCase\IAddExpenseUseCase.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Presentation\AddInvestmentUseCase\AddInvestmentUseCase.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Presentation\AddInvestmentUseCase\IAddInvestmentUseCase.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Presentation\AddMonthlyExpenseUseCase\AddMonthlyExpenseUseCase.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Presentation\AddMonthlyExpenseUseCase\IAddMonthlyExpenseUseCase.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Presentation\AddTransferUseCaseBase.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Presentation\EditCashMovementUseCase\IEditCashMovementUseCase.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Presentation\EditCashStatementUseCase.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Presentation\EditExpenseItemUseCase\EditExpenseItemUseCase.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Presentation\EditExpenseItemUseCase\IEditExpenseItemUseCase.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Presentation\EditMonthlyExpenseUseCase\EditMonthlyExpenseUseCase.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Presentation\EditMonthlyExpenseUseCase\IEditMonthlyExpenseUseCase.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Presentation\EditPlanningSettingsUseCase\EditPlanningSettingsUseCase.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Presentation\EditPlanningSettingsUseCase\EditPlanningSettingsViewModel.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Presentation\EditPlanningSettingsUseCase\IEditPlanningSettingsUseCase.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Presentation\EditRemainderUseCase\IEditRemainderUseCase.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Presentation\IDataGrid.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Presentation\IEditExpenseItemView.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Presentation\IEditMonthlyExpenseView.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Presentation\IEditTransferView.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Presentation\IModelView.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Presentation\IView.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Presentation\MoneyExtentions.cs" />
+    <Compile Include="Presentation\PEBudgetRow.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Presentation\PEEditableExpenseItem.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Presentation\PEMonthlyExpense.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Presentation\PESelectableExpenseItem.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Presentation\PETransfer.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Presentation\SetRemainderUseCase\ISetRemainderUseCase.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Presentation\SetRemainderUseCase\SetRemainderUseCase.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Presentation\ShowCalculationUseCase\IShowCalculationUseCase.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Presentation\ShowCalculationUseCase\IShowCalculationView.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Presentation\ShowCalculationUseCase\ShowCalculationUseCase.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Domain\CashStatement.cs" />
+    <Compile Include="Domain\DatedSet.cs" />
+    <Compile Include="DateTimeExtentions.cs" />
+    <Compile Include="EnumerableExtentions.cs" />
+    <Compile Include="Domain\IDated.cs" />
+    <Compile Include="Utils\Set.cs" />
+    <Compile Include="Domain\TransferExtentions.cs" />
+    <Compile Include="Domain\BudgetWeek.cs" />
+    <Compile Include="Domain\Week.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

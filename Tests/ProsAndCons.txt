@@ -1,0 +1,18 @@
+﻿
+Pros:
+	-
+
+Cons:
+	-
+
+
+Thoughts:
+	If some part of class functionality is his private plementation
+	when it should be tested in all ways which it influence class contract.
+	
+	But if such functionality is moved to another class and become its public contract
+	then testing of such functionality's usage can be reduced.
+	
+	So EACH class MUST be tested:
+	(1) his own contract and
+	(2) usage of contracts used classes.

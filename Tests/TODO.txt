@@ -1,0 +1,64 @@
+﻿- negative remainers
+- When open the tool, create month cash movement instances for those in the past
+	(so that if no instance was created manually in a particular month, it wouldn't move to another
+	date when the category is edited later)
+- Ability to delete monthly cash movement category
+
+- Rethink the algorithm!
+- Show positive values with the "+" sign
+
+- Allow to select several rows and move then on another date all together.
+
+- Allow deleting monthly expenses while there are no tied expenses
+	- When deleting a monthly expense with tied expenses, finalize it instead
+
+- Modify Period
+	- Stash data
+	- Validate From < To
+
+- When editing auto-generated monthly expense, it should be saved then
+- Split out slow tests
+- Remember a date the last expense/investment was created on and use it to create ones further
+
+- REFACTORINGs:
+	- Rows of the grid should expose a collection of commands
+		- These commands should be mapped to the UI buttons
+		- If there is a corresponding command, then button will be enabled, otherwise disabled.
+	- Use Model/View/ViewModel pattern
+	- Inject everything, do not call ObjectFactory directly elsewhere except Application
+	- Store investments and expenses in the same container:
+		- investments as positive value
+		- expenses as negative value
+		- delete Within methods
+		- delete overriding Equals menthods from Domain Entities classes
+	- Split out a CalculationDataContainder from the CalculationDataProvider
+		- store on disk the CalculationDataContainder - migrate the data
+	- Convert the deletion into UseCase
+		- test the run of the ShowCalculationUseCase
+	- Dsl in tests
+		- Prepearing the budget in the tests for the CalculationUseCase
+		- normalize dates as 01.02.of2009
+
+- Advanced editing
+	- Handle double-click to start editing of the row
+	- Handle Del and Ins keys to delete/add the row
+	- Selection should remain on the selected row when the data in the grid is updated
+	- Disable the edit/delete buttons when action doesn't make sense
+
+- The whole current week should fit the screen until the last Remainder is put into the system
+- Searching
+- Filtering
+- Show free money for some date (using TransactionDate; every change should have one)
+- When set remainder show Envelope expenses which were expensed since previous remainder
+- Show savings / over expenses per month
+- Free money should only be displayed for the latest remainder and later expenses (show empty cells for earlier remainders)
+- Real DB
+- Handle case when expences exceed envelope size: set the end-of-week-remainder equals to the last remainder
+- Save columns width
+- Try to catch IView inheritors instances and call their Show method
+- ico
+- Show icon for each row to indicate its type
+- Show unplanned expenses for provided period (week/month/custom):
+	- Expenses
+	- Week over-expenses
+- SOA

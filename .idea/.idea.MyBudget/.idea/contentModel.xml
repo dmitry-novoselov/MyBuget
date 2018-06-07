@@ -1,0 +1,232 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ContentModelStore">
+    <e p="$USER_HOME$/Library/Caches/Rider2018.1/resharper-host/local/Transient/ReSharperHost/v12/SolutionCaches/_MyBudget.1276457179.00" t="ExcludeRecursive" />
+    <e p="$PROJECT_DIR$" t="IncludeFlat">
+      <e p=".nuget" t="Include">
+        <e p="packages.config" t="Include" />
+      </e>
+      <e p="Budget" t="IncludeRecursive">
+        <e p="bin" t="ExcludeRecursive" />
+        <e p="Budget.csproj" t="IncludeRecursive" />
+        <e p="DateTimeExtentions.cs" t="Include" />
+        <e p="Domain" t="Include">
+          <e p="Budget.cs" t="Include" />
+          <e p="BudgetCalculation.cs" t="Include" />
+          <e p="BudgetWeek.cs" t="Include" />
+          <e p="CalculationDataPreprocessor.cs" t="Include" />
+          <e p="CashStatement.cs" t="Include" />
+          <e p="DatedSet.cs" t="Include" />
+          <e p="DateTimeService.cs" t="Include" />
+          <e p="IBudget.cs" t="Include" />
+          <e p="IBudgetService.cs" t="Include" />
+          <e p="ICalculationDataProvider.cs" t="Include" />
+          <e p="IDataDeletionService.cs" t="Include" />
+          <e p="IDataSavingService.cs" t="Include" />
+          <e p="IDated.cs" t="Include" />
+          <e p="MonthlyCashStatement.cs" t="Include" />
+          <e p="MonthlyCashStatementCategory.cs" t="Include" />
+          <e p="Period.cs" t="Include" />
+          <e p="TransferExtentions.cs" t="Include" />
+          <e p="WalletCalculator.cs" t="Include" />
+          <e p="Week.cs" t="Include" />
+          <e p="YearMonth.cs" t="Include" />
+        </e>
+        <e p="EnumerableExtentions.cs" t="Include" />
+        <e p="Infrastructure" t="Include">
+          <e p="Binder.cs" t="Include" />
+          <e p="BudgetService.cs" t="Include" />
+          <e p="CalculationDataProvider.cs" t="Include" />
+          <e p="DataContainer2.cs" t="Include" />
+          <e p="DataGrid.cs" t="Include" />
+          <e p="IMemento.cs" t="Include" />
+          <e p="Memento.cs" t="Include" />
+          <e p="VersionedMemento.cs" t="Include" />
+        </e>
+        <e p="obj" t="ExcludeRecursive" />
+        <e p="Presentation" t="Include">
+          <e p="AddExpenseItemUseCase" t="Include">
+            <e p="AddExpenseItemUseCase.cs" t="Include" />
+            <e p="IAddExpenseItemUseCase.cs" t="Include" />
+          </e>
+          <e p="AddExpenseUseCase" t="Include">
+            <e p="AddExpenseUseCase.cs" t="Include" />
+            <e p="IAddExpenseUseCase.cs" t="Include" />
+          </e>
+          <e p="AddInvestmentUseCase" t="Include">
+            <e p="AddInvestmentUseCase.cs" t="Include" />
+            <e p="IAddInvestmentUseCase.cs" t="Include" />
+          </e>
+          <e p="AddMonthlyExpenseUseCase" t="Include">
+            <e p="AddMonthlyExpenseUseCase.cs" t="Include" />
+            <e p="IAddMonthlyExpenseUseCase.cs" t="Include" />
+          </e>
+          <e p="AddTransferUseCaseBase.cs" t="Include" />
+          <e p="EditCashMovementUseCase" t="Include">
+            <e p="IEditCashMovementUseCase.cs" t="Include" />
+          </e>
+          <e p="EditCashStatementUseCase.cs" t="Include" />
+          <e p="EditExpenseItemUseCase" t="Include">
+            <e p="EditExpenseItemUseCase.cs" t="Include" />
+            <e p="IEditExpenseItemUseCase.cs" t="Include" />
+          </e>
+          <e p="EditMonthlyExpenseUseCase" t="Include">
+            <e p="EditMonthlyExpenseUseCase.cs" t="Include" />
+            <e p="IEditMonthlyExpenseUseCase.cs" t="Include" />
+          </e>
+          <e p="EditPlanningSettingsUseCase" t="Include">
+            <e p="EditPlanningSettingsUseCase.cs" t="Include" />
+            <e p="EditPlanningSettingsViewModel.cs" t="Include" />
+            <e p="IEditPlanningSettingsUseCase.cs" t="Include" />
+          </e>
+          <e p="EditRemainderUseCase" t="Include">
+            <e p="IEditRemainderUseCase.cs" t="Include" />
+          </e>
+          <e p="IDataGrid.cs" t="Include" />
+          <e p="IEditExpenseItemView.cs" t="Include" />
+          <e p="IEditMonthlyExpenseView.cs" t="Include" />
+          <e p="IEditTransferView.cs" t="Include" />
+          <e p="IModelView.cs" t="Include" />
+          <e p="IView.cs" t="Include" />
+          <e p="MoneyExtentions.cs" t="Include" />
+          <e p="PEBudgetRow.cs" t="Include" />
+          <e p="PEEditableExpenseItem.cs" t="Include" />
+          <e p="PEMonthlyExpense.cs" t="Include" />
+          <e p="PESelectableExpenseItem.cs" t="Include" />
+          <e p="PETransfer.cs" t="Include" />
+          <e p="SetRemainderUseCase" t="Include">
+            <e p="ISetRemainderUseCase.cs" t="Include" />
+            <e p="SetRemainderUseCase.cs" t="Include" />
+          </e>
+          <e p="ShowCalculationUseCase" t="Include">
+            <e p="IShowCalculationUseCase.cs" t="Include" />
+            <e p="IShowCalculationView.cs" t="Include" />
+            <e p="ShowCalculationUseCase.cs" t="Include" />
+          </e>
+        </e>
+        <e p="Properties" t="Include">
+          <e p="AssemblyInfo.cs" t="Include" />
+        </e>
+        <e p="Utils" t="Include">
+          <e p="Set.cs" t="Include" />
+        </e>
+      </e>
+      <e p="Description.txt" t="Include" />
+      <e p="MyBudget" t="IncludeRecursive">
+        <e p="app.config" t="Include" />
+        <e p="bin" t="ExcludeRecursive" />
+        <e p="EditExpenseItemView.cs" t="Include" />
+        <e p="EditExpenseItemView.Designer.cs" t="Include" />
+        <e p="EditExpenseItemView.resx" t="Include" />
+        <e p="EditMonthlyExpenseView.cs" t="Include" />
+        <e p="EditMonthlyExpenseView.Designer.cs" t="Include" />
+        <e p="EditMonthlyExpenseView.resx" t="Include" />
+        <e p="EditTransferView.cs" t="Include" />
+        <e p="EditTransferView.Designer.cs" t="Include" />
+        <e p="EditTransferView.resx" t="Include" />
+        <e p="lib" t="Include">
+          <e p="StructureMap.dll" t="Include" />
+        </e>
+        <e p="MainForm.cs" t="Include" />
+        <e p="MainForm.Designer.cs" t="Include" />
+        <e p="MainForm.resx" t="Include" />
+        <e p="MyBudget.csproj" t="IncludeRecursive" />
+        <e p="obj" t="ExcludeRecursive" />
+        <e p="Program.cs" t="Include" />
+        <e p="Properties" t="Include">
+          <e p="AssemblyInfo.cs" t="Include" />
+          <e p="DataSources" t="Include">
+            <e p="Budget.Presentation.EditPlanningSettingsUseCase.EditPlanningSettingsViewModel.datasource" t="Include" />
+          </e>
+          <e p="lock.ico" t="Include" />
+        </e>
+      </e>
+      <e p="MyBudget.sln" t="IncludeFlat" />
+      <e p="packages" t="ExcludeRecursive" />
+      <e p="Solution Items" t="Include" />
+      <e p="Tests" t="IncludeRecursive">
+        <e p="_" t="Include">
+          <e p="Dsl" t="Include">
+            <e p="PeriodBuilder.cs" t="Include" />
+          </e>
+          <e p="Fakes" t="Include">
+            <e p="BudgetFake.cs" t="Include" />
+            <e p="BudgetServiceFake.cs" t="Include" />
+            <e p="PersistentStorageFake.cs" t="Include" />
+          </e>
+          <e p="lib" t="Include">
+            <e p="Moq.dll" t="Include" />
+          </e>
+        </e>
+        <e p="bin" t="ExcludeRecursive" />
+        <e p="DateExtentions.cs" t="Include" />
+        <e p="Domain" t="Include">
+          <e p="BudgetCalculationTests.cs" t="Include" />
+          <e p="CalculationDataPreprocessorTests.cs" t="Include" />
+          <e p="DatedSetTests.cs" t="Include" />
+          <e p="ExpenseItemTests.cs" t="Include" />
+          <e p="PeriodTests.cs" t="Include" />
+          <e p="YearMonthTests.cs" t="Include" />
+        </e>
+        <e p="FixtureBase.cs" t="Include" />
+        <e p="Infrastructure" t="Include">
+          <e p="BinderTests.cs" t="Include" />
+          <e p="CalculationDataProviderTests.cs" t="Include" />
+          <e p="DataContainerTests.cs" t="Include" />
+          <e p="Fakes" t="Include">
+            <e p="DataObject.cs" t="Include" />
+          </e>
+          <e p="MementoTests.cs" t="Include" />
+        </e>
+        <e p="obj" t="ExcludeRecursive" />
+        <e p="packages.config" t="Include" />
+        <e p="Presentation" t="Include">
+          <e p="AddExpenseUseCaseTests.cs" t="Include" />
+          <e p="AddInvestmentUseCaseTests.cs" t="Include" />
+          <e p="AddMonthlyCashMovementUseCaseTests.cs" t="Include" />
+          <e p="AddMonthlyCashStatementCategoryUseCaseTests.cs" t="Include" />
+          <e p="CalculationDataProviderExtensions.cs" t="Include" />
+          <e p="EditDataUseCaseFixtureBase.cs" t="Include" />
+          <e p="EditExpenseItemUseCaseTests.cs" t="Include" />
+          <e p="EditingTests" t="Include">
+            <e p="WhenEditCashStatement.cs" t="Include" />
+            <e p="WhenEditMonthlyCashMovement.cs" t="Include" />
+          </e>
+          <e p="EditPlanningSettingsUseCaseTests" t="Include">
+            <e p="EditPlanningSettingsUseCaseTestsBase.cs" t="Include" />
+            <e p="WhenDisplayingEditPlanningSettings.cs" t="Include" />
+            <e p="WhenEditBottomLine.cs" t="Include" />
+            <e p="WhenEditDateOfLeave.cs" t="Include" />
+            <e p="WhenEditedCalculationPeriod.cs" t="Include" />
+            <e p="WhenEditedEnvelopeSize.cs" t="Include" />
+            <e p="WhenEditedInitialRemainder.cs" t="Include" />
+          </e>
+          <e p="Fakes" t="Include">
+            <e p="DataGridFake.cs" t="Include" />
+            <e p="EditExpenseItemViewFake.cs" t="Include" />
+            <e p="EditMonthlyExpenseViewFake.cs" t="Include" />
+            <e p="EditTransferViewFake.cs" t="Include" />
+            <e p="ModelViewFake.cs" t="Include" />
+            <e p="ShowCalculationViewFake.cs" t="Include" />
+          </e>
+          <e p="PEBudgetRowTests.cs" t="Include" />
+          <e p="PEMonthlyExpenseTests.cs" t="Include" />
+          <e p="PESelectableExpenseItemTests.cs" t="Include" />
+          <e p="SetRemainderUseCaseTests.cs" t="Include" />
+          <e p="ShowCalculationUseCaseTests" t="Include">
+            <e p="ShowCalculationUseCaseTests_Fixture.cs" t="Include" />
+            <e p="ShowCalculationUseCaseTestsBase.cs" t="Include" />
+            <e p="WhenDisplayingShowCalculationUseCase.cs" t="Include" />
+            <e p="WhenStartEditingRow.cs" t="Include" />
+          </e>
+        </e>
+        <e p="Properties" t="Include">
+          <e p="AssemblyInfo.cs" t="Include" />
+        </e>
+        <e p="ProsAndCons.txt" t="Include" />
+        <e p="Tests.csproj" t="IncludeRecursive" />
+        <e p="TODO.txt" t="Include" />
+      </e>
+    </e>
+  </component>
+</project>
