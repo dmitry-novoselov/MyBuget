@@ -1,10 +1,8 @@
 ﻿using System;
 using System.Linq;
-using Budget;
 using Budget.Domain;
 using Budget.Infrastructure;
 using NUnit.Framework;
-using Tests.Dsl;
 using Tests.Fakes;
 
 namespace Tests.Domain {
@@ -18,8 +16,7 @@ namespace Tests.Domain {
 		}
 
 		private int EnvelopeSize {
-			get { return dataProvider.EnvelopeSize;  }
-			set { dataProvider.EnvelopeSize = value; }
+			set => dataProvider.EnvelopeSize = value;
 		}
 
 		private void SetCalculatedPeriod(Period period) {
@@ -175,23 +172,6 @@ namespace Tests.Domain {
 
 			var weeks = budget.Weeks.ToList();
 			Assert.AreEqual(100, weeks[0].Remainder);
-			Assert.AreEqual(20, weeks[0].DayEnvelopeSize);
-		}
-
-		[Test]
-		public void LastDayRemainderMakeDayEnvelopeSizeEqualsWeekRemainder() {
-			EnvelopeSize = 70;
-			SetRemainder(1.02.of2009(), 140);
-			SetCalculatedPeriod(2.02.of2009() - 16.02.of2009());
-
-			SetRemainder(8.02.of2009(), 100);
-			//
-
-			var budget = CalculateBudget();
-
-			var weeks = budget.Weeks.ToList();
-			Assert.AreEqual(30, weeks[0].Remainder);
-			Assert.AreEqual(30, weeks[0].DayEnvelopeSize);
 		}
 
 		[Test]
@@ -477,22 +457,6 @@ namespace Tests.Domain {
 		}
 
         [Test]
-        public void ShouldCalculateMonthlyBalance()
-        {
-            EnvelopeSize = 70;
-            SetRemainder(1.02.of2009(), 0);
-            SetCalculatedPeriod(2.02.of2009() - 16.02.of2009());
-
-            AddMonthlyExpense(5, 100, "gaz");
-            AddMonthlyExpense(20, -500, "salary");
-            //
-
-            var budget = CalculateBudget();
-
-            Assert.AreEqual(500 - 100 - (70 / 7 * 31), budget.MonthlyBalance);
-        }
-
-        [Test]
         public void ShouldCalculateMonthlyExpenseRemainder()
         {
             EnvelopeSize = 70;
@@ -500,19 +464,19 @@ namespace Tests.Domain {
             SetCalculatedPeriod(2.02.of2009() - 16.02.of2009());
 
             var gaz = AddMonthlyExpense(14, 100, "gaz");
-            AddMonthlyExpenseInstance(5.02.of2009(), -30, gaz, false);
+            AddMonthlyExpenseInstance(5.02.of2009(), -40, gaz, false);
             //
 
             var budget = CalculateBudget();
 
-            Assert.AreEqual(500 - 70 - 30, budget.GetRemainder(8.02.of2009()));
+            Assert.AreEqual(500 - 70 - 40, budget.GetRemainder(8.02.of2009()));
             Assert.AreEqual(500 - 70*2 - 100, budget.GetRemainder(15.02.of2009()));
             //
             var monthlyMovements = budget.MonthlyCashMovements.ToList();
             Assert.AreEqual(2, monthlyMovements.Count);
 
             var plan = monthlyMovements.Single(_ => _.Date == 14.02.of2009());
-            Assert.AreEqual(-70, plan.Amount);
+            Assert.AreEqual(-60, plan.Amount);
         }
 
         [Test]
@@ -534,6 +498,111 @@ namespace Tests.Domain {
             var plan = budget.MonthlyCashMovements.Single();
             Assert.AreEqual(-110, plan.Amount);
             Assert.AreEqual((DateTime)5.02.of2009(), plan.Date);
+        }
+
+        [Test]
+        public void ShouldCalculateMonthlyBalance()
+        {
+	        EnvelopeSize = 70;
+	        SetRemainder(1.02.of2009(), 0);
+	        SetCalculatedPeriod(2.02.of2009() - 16.02.of2009());
+
+	        AddMonthlyExpense(5, 100, "gaz");
+	        AddMonthlyExpense(20, -500, "salary");
+	        //
+
+	        var budget = CalculateBudget();
+
+	        Assert.AreEqual(500 - 100 - (70 * 4), budget.MonthlyBalance);
+        }
+
+        [Test]
+        public void ShouldCalculateActualMonthlyBalance_ConsiderEnvelope()
+        {
+	        EnvelopeSize = 70;
+	        SetRemainder(1.01.of2009(), 100);
+	        SetCalculatedPeriod(2.01.of2009() - 1.03.of2009());
+	        //
+
+	        var budget = CalculateBudget();
+
+	        Assert.AreEqual(-(70 * 4), budget.MonthlyActualBalances.GetFor(1.01.of2009()));
+	        Assert.AreEqual(-(70 * 4), budget.MonthlyActualBalances.GetFor(1.02.of2009()));
+        }
+
+        [Test]
+        public void ShouldCalculateActualMonthlyBalance_ConsiderWeekRemainders()
+        {
+	        EnvelopeSize = 70;
+	        SetRemainder(1.01.of2009(), 100);
+	        SetCalculatedPeriod(2.01.of2009() - 1.03.of2009());
+	        //
+
+	        SetRemainder(8.01.of2009(), 90);
+
+	        //
+
+	        var budget = CalculateBudget();
+
+	        Assert.AreEqual(-(70 * 3) - (100 - 90), budget.MonthlyActualBalances.GetFor(1.01.of2009()));
+	        Assert.AreEqual(-(70 * 4), budget.MonthlyActualBalances.GetFor(1.02.of2009()));
+        }
+
+        [Test]
+        public void ShouldCalculateActualMonthlyBalance_ConsiderCashMovements()
+        {
+	        EnvelopeSize = 70;
+	        SetRemainder(1.01.of2009(), 100);
+	        SetCalculatedPeriod(2.01.of2009() - 1.03.of2009());
+	        //
+
+	        AddInvestment(1.01.of2009(), 20);
+	        AddPurchase(8.01.of2009(), 30);
+
+	        //
+
+	        var budget = CalculateBudget();
+
+	        Assert.AreEqual(-(70 * 4) + (20 - 30), budget.MonthlyActualBalances.GetFor(1.01.of2009()));
+	        Assert.AreEqual(-(70 * 4), budget.MonthlyActualBalances.GetFor(1.02.of2009()));
+        }
+
+        [Test]
+        public void ShouldCalculateActualMonthlyBalance_ConsiderMonthlyCashMovements()
+        {
+	        EnvelopeSize = 70;
+	        SetRemainder(1.01.of2009(), 100);
+	        SetCalculatedPeriod(2.01.of2009() - 1.03.of2009());
+	        //
+
+	        AddMonthlyExpense(31, 40, "gaz");
+
+	        //
+
+	        var budget = CalculateBudget();
+
+	        Assert.AreEqual(-(70 * 4) - 40, budget.MonthlyActualBalances.GetFor(1.01.of2009()));
+	        Assert.AreEqual(-(70 * 4) - 40, budget.MonthlyActualBalances.GetFor(1.02.of2009()));
+        }
+
+        [Test]
+        public void ShouldCalculateActualMonthlyBalance_ConsiderFinalMonthlyCashMovements()
+        {
+	        EnvelopeSize = 70;
+	        SetRemainder(1.01.of2009(), 100);
+	        SetCalculatedPeriod(2.01.of2009() - 1.03.of2009());
+	        //
+
+	        var gaz = AddMonthlyExpense(31, 40, "gaz");
+	        AddMonthlyExpenseInstance(15.01.of2009(), -10, gaz, true);
+	        AddMonthlyExpenseInstance(15.02.of2009(), -10, gaz, false);
+
+	        //
+
+	        var budget = CalculateBudget();
+
+	        Assert.AreEqual(-(70 * 4) - 10, budget.MonthlyActualBalances.GetFor(1.01.of2009()));
+	        Assert.AreEqual(-(70 * 4) - 40, budget.MonthlyActualBalances.GetFor(1.02.of2009()));
         }
     }
 }

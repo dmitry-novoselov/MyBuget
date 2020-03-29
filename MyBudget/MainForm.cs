@@ -52,29 +52,29 @@ namespace MyBudget {
 
 		private void ConfigureStructureMap() {
 			ObjectFactory.Initialize(x => {
-				x.ForRequestedType<ICalculationDataProvider>().TheDefault.IsThis(dataProvider);
-				x.ForRequestedType<IDataDeletionService>().TheDefault.IsThis(dataProvider);
-				x.ForRequestedType<IDataSavingService>().TheDefault.IsThis(dataProvider);
-				x.ForRequestedType<IBudgetService>().TheDefault.Is.OfConcreteType<BudgetService>();
+				x.For<ICalculationDataProvider>().Use(dataProvider);
+				x.For<IDataDeletionService>().Use(dataProvider);
+				x.For<IDataSavingService>().Use(dataProvider);
+				x.For<IBudgetService>().TheDefault.Is.OfConcreteType<BudgetService>();
 
-				x.ForRequestedType<IEditExpenseItemView>().TheDefaultIsConcreteType<EditExpenseItemView>();
-				x.ForRequestedType<IEditMonthlyExpenseView>().TheDefaultIsConcreteType<EditMonthlyExpenseView>();
-				x.ForRequestedType<IEditTransferView>().TheDefaultIsConcreteType<EditTransferView>();
-				x.ForRequestedType<IShowCalculationView>().TheDefault.IsThis(this);
-				x.ForRequestedType<IModelView<EditPlanningSettingsViewModel>>().TheDefault.IsThis(this);
+				x.For<IEditExpenseItemView>().TheDefaultIsConcreteType<EditExpenseItemView>();
+				x.For<IEditMonthlyExpenseView>().TheDefaultIsConcreteType<EditMonthlyExpenseView>();
+				x.For<IEditTransferView>().TheDefaultIsConcreteType<EditTransferView>();
+				x.For<IShowCalculationView>().Use(this);
+				x.For<IModelView<EditPlanningSettingsViewModel>>().Use(this);
 
-				x.ForRequestedType<IAddExpenseItemUseCase>().TheDefaultIsConcreteType<AddExpenseItemUseCase>();
-				x.ForRequestedType<IAddExpenseUseCase>().TheDefaultIsConcreteType<AddExpenseUseCase>();
-				x.ForRequestedType<IAddInvestmentUseCase>().TheDefaultIsConcreteType<AddInvestmentUseCase>();
-				x.ForRequestedType<IAddMonthlyExpenseUseCase>().TheDefaultIsConcreteType<AddMonthlyExpenseUseCase>();
-				x.ForRequestedType<ISetRemainderUseCase>().TheDefaultIsConcreteType<SetRemainderUseCase>();
-				x.ForRequestedType<IShowCalculationUseCase>().TheDefaultIsConcreteType<ShowCalculationUseCase>();
+				x.For<IAddExpenseItemUseCase>().TheDefaultIsConcreteType<AddExpenseItemUseCase>();
+				x.For<IAddExpenseUseCase>().TheDefaultIsConcreteType<AddExpenseUseCase>();
+				x.For<IAddInvestmentUseCase>().TheDefaultIsConcreteType<AddInvestmentUseCase>();
+				x.For<IAddMonthlyExpenseUseCase>().TheDefaultIsConcreteType<AddMonthlyExpenseUseCase>();
+				x.For<ISetRemainderUseCase>().TheDefaultIsConcreteType<SetRemainderUseCase>();
+				x.For<IShowCalculationUseCase>().TheDefaultIsConcreteType<ShowCalculationUseCase>();
 
-				x.ForRequestedType<IEditPlanningSettingsUseCase>().TheDefaultIsConcreteType<EditPlanningSettingsUseCase>();
-				x.ForRequestedType<IEditCashMovementUseCase>().TheDefaultIsConcreteType<EditCashStatementUseCase>();
-				x.ForRequestedType<IEditRemainderUseCase>().TheDefaultIsConcreteType<EditCashStatementUseCase>();
-				x.ForRequestedType<IEditMonthlyExpenseUseCase>().TheDefaultIsConcreteType<EditMonthlyExpenseUseCase>();
-				x.ForRequestedType<IEditExpenseItemUseCase>().TheDefaultIsConcreteType<EditExpenseItemUseCase>();
+				x.For<IEditPlanningSettingsUseCase>().TheDefaultIsConcreteType<EditPlanningSettingsUseCase>();
+				x.For<IEditCashMovementUseCase>().TheDefaultIsConcreteType<EditCashStatementUseCase>();
+				x.For<IEditRemainderUseCase>().TheDefaultIsConcreteType<EditCashStatementUseCase>();
+				x.For<IEditMonthlyExpenseUseCase>().TheDefaultIsConcreteType<EditMonthlyExpenseUseCase>();
+				x.For<IEditExpenseItemUseCase>().TheDefaultIsConcreteType<EditExpenseItemUseCase>();
 			});
 		}
 
@@ -93,7 +93,7 @@ namespace MyBudget {
 		[Category("MyBudget")]
 		[DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)]
 		public string MonthlyBalance {
-			set { monthlyBalance.Text = "Месячный баланс: " + value; }
+			set { monthlyBalance.Text = value; }
 		}
 
 		[Category("MyBudget")]

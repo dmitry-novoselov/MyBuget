@@ -11,6 +11,9 @@ namespace Budget.Domain {
 		public int Month { get; private set; }
 		public int Year { get; private set; }
 
+		public DateTime FirstDay => new DateTime(Year, Month, 1);
+		public DateTime LastDay => GetDate(31);
+
 		public DateTime GetDate(int dayOfMonth) {
 			return new DateTime(Year, Month, Math.Min(dayOfMonth, DateTime.DaysInMonth(Year, Month)));
 		}
@@ -48,6 +51,10 @@ namespace Budget.Domain {
 
 		public static implicit operator YearMonth(DateTime month) {
 			return new YearMonth(month.Month, month.Year);
+		}
+
+		public static implicit operator Period(YearMonth month) {
+			return new Period(month.FirstDay, month.LastDay);
 		}
 	}
 }

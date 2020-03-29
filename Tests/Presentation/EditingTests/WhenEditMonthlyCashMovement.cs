@@ -30,7 +30,7 @@ namespace Tests.Presentation.EditingTests {
 			view = new EditMonthlyExpenseViewFake();
 
 			ObjectFactory.Initialize(x => {
-				x.ForRequestedType<IShowCalculationUseCase>().TheDefault.IsThis(showCalculationUseCaseMock.Object);
+				x.For<IShowCalculationUseCase>().Use(showCalculationUseCaseMock.Object);
 			});
 
 			dataProvider = new CalculationDataProvider(new PersistentStorageFake());

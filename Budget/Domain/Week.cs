@@ -13,10 +13,6 @@ namespace Budget.Domain {
 			get { return FirstDay.AddDays(6); }
 		}
 
-		public DateTime PreviousWeekFirstDay {
-			get { return FirstDay.AddDays(-1); }
-		}
-
 		public int Month {
 			get { return FirstDay.Month; }
 		}

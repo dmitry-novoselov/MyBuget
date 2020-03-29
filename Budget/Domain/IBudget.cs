@@ -13,6 +13,7 @@ namespace Budget.Domain {
 		IEnumerable<CashStatement> Expenses { get; }
 		IEnumerable<MonthlyCashStatement> MonthlyCashMovements { get; }
 		int MonthlyBalance { get; }
+		MonthlyActualBalances MonthlyActualBalances { get; }
 
 		int GetRemainder(DateTime date);
 		int GetFreeMoney(DateTime date);

@@ -28,16 +28,51 @@ namespace Budget.Domain {
 				CalculateWeekRemainders();
 				CalculateCoverages();
 				CalculateMonthlyBalance();
+				CalculateMonthlyActualBalance();
 			}
 
 			return budget;
+		}
+
+		private void CalculateMonthlyActualBalance() {
+			string Key(DateTime date) => $"{date.Year}-{date.Month}";
+
+			var monthlyActualBalances = budgetWeeks.Aggregate(new Dictionary<string, int>(), (acc, week) => {
+				var key = Key(week.LastDay);
+
+				acc.TryGetValue(key, out var balance);
+
+				var weekIsDone = lastRemainderDate[week] == week.LastDay;
+				var weekIsOverdraft = week.Balance < -EnvelopeSize;
+
+				var weekBalance = weekIsDone || weekIsOverdraft
+					? week.Balance
+					: -EnvelopeSize;
+
+				acc[key] = balance + weekBalance;
+
+				return acc;
+			});
+
+			calculationData.CashMovements.Select(x => new {x.Date, x.Amount})
+				.Concat(calculationData.MonthlyCashMovements.Select(x => new {x.Date, x.Amount}))
+				.Aggregate(monthlyActualBalances, (acc, x) => {
+					var key = Key(x.Date);
+
+					acc.TryGetValue(key, out var balance);
+					acc[key] = balance + x.Amount;
+
+					return acc;
+				});
+
+			budget.MonthlyActualBalances = new MonthlyActualBalances(monthlyActualBalances);
 		}
 
 		private void CalculateMonthlyBalance() {
             var monthlyCategoriesBalance = calculationData.MonthlyCashMovementCategories
                 .Where(c => c.Effective.To == DateTimeService.MaxValue)
                 .Sum(c => c.Amount);
-            budget.MonthlyBalance = monthlyCategoriesBalance - DayEnvelopeSize * 31;
+            budget.MonthlyBalance = monthlyCategoriesBalance - EnvelopeSize * 4;
 		}
 
 		private bool InitialRemainderIsSet {
@@ -175,8 +210,8 @@ namespace Budget.Domain {
 					CashMovements[period].Sum(x => x.Amount) +
 					MonthlyCashMovements[period].Sum(x => x.Amount);
 
+				week.Balance = -balance;
 				week.Remainder = EnvelopeSize - balance;
-				week.DayEnvelopeSize = week.Remainder / Math.Max(1, (week.LastDay - lastRemainderDate[week]).Days);
 			}
 		}
 

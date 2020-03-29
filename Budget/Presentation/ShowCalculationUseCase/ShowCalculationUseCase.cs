@@ -91,15 +91,19 @@ namespace Budget.Presentation.ShowCalculationUseCase {
 			}
 
 			view.CalculationResults.DataSource = new List<PEBudgetRow>(dataSource.Values);
-			view.MonthlyBalance = budget.MonthlyBalance.ToString("+#;#");
+
+			var monthToBalance = budget.Remainders.LastOrDefault()?.Date ?? DateTimeService.Now();
+			var actualBalance = budget.MonthlyActualBalances.GetFor(monthToBalance);
+			var budgetBalance = budget.MonthlyBalance;
+			view.MonthlyBalance = $"Баланс: {actualBalance:+#;#} / {budgetBalance:+#;#}";
 
 			return currentWeek;
 		}
 
 		private static DateTime CurrentWeekMarker(IBudget budget) {
-			var lastReminder = budget.Remainders.LastOrDefault();
+			var lastRemainder = budget.Remainders.LastOrDefault();
 			var now = DateTimeService.Now();
-			return lastReminder != null && lastReminder.Date < now ? lastReminder.Date : now;
+			return lastRemainder != null && lastRemainder.Date < now ? lastRemainder.Date : now;
 		}
 
 		private void SelectLastRemainderOf(IBudget budget, BudgetWeek currentWeek) {

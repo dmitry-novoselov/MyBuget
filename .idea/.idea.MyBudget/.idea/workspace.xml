@@ -1,81 +1,124 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="3e05ccaa-ccca-4f79-9be0-2abdd05dc297" name="Default" comment="" />
+    <list default="true" id="3e05ccaa-ccca-4f79-9be0-2abdd05dc297" name="Default" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/.idea.MyBudget/.idea/projectSettingsUpdater.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/.idea.MyBudget/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Budget/Domain/MonthlyActualBalances.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MyBudget/packages.config" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.MyBudget/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.MyBudget/.idea/contentModel.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.MyBudget/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.MyBudget/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Budget/Budget.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Budget/Budget.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Budget/Domain/Budget.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Budget/Domain/Budget.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Budget/Domain/BudgetCalculation.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Budget/Domain/BudgetCalculation.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Budget/Domain/BudgetWeek.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Budget/Domain/BudgetWeek.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Budget/Domain/IBudget.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Budget/Domain/IBudget.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Budget/Domain/Week.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Budget/Domain/Week.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Budget/Domain/YearMonth.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Budget/Domain/YearMonth.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Budget/Presentation/ShowCalculationUseCase/ShowCalculationUseCase.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Budget/Presentation/ShowCalculationUseCase/ShowCalculationUseCase.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MyBudget/MainForm.cs" beforeDir="false" afterPath="$PROJECT_DIR$/MyBudget/MainForm.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MyBudget/MyBudget.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/MyBudget/MyBudget.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tests/Domain/BudgetCalculationTests.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Tests/Domain/BudgetCalculationTests.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tests/Domain/PeriodTests.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Tests/Domain/PeriodTests.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tests/Presentation/AddMonthlyCashMovementUseCaseTests.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Tests/Presentation/AddMonthlyCashMovementUseCaseTests.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tests/Presentation/AddMonthlyCashStatementCategoryUseCaseTests.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Tests/Presentation/AddMonthlyCashStatementCategoryUseCaseTests.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tests/Presentation/EditDataUseCaseFixtureBase.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Tests/Presentation/EditDataUseCaseFixtureBase.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tests/Presentation/EditExpenseItemUseCaseTests.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Tests/Presentation/EditExpenseItemUseCaseTests.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tests/Presentation/EditPlanningSettingsUseCaseTests/EditPlanningSettingsUseCaseTestsBase.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Tests/Presentation/EditPlanningSettingsUseCaseTests/EditPlanningSettingsUseCaseTestsBase.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tests/Presentation/EditingTests/WhenEditCashStatement.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Tests/Presentation/EditingTests/WhenEditCashStatement.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tests/Presentation/EditingTests/WhenEditMonthlyCashMovement.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Tests/Presentation/EditingTests/WhenEditMonthlyCashMovement.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tests/Tests.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Tests/Tests.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tests/_/Fakes/BudgetFake.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Tests/_/Fakes/BudgetFake.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tests/packages.config" beforeDir="false" afterPath="$PROJECT_DIR$/Tests/packages.config" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
-    <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="EditExpenseItemView.cs" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/MyBudget/EditExpenseItemView.cs">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="420">
-              <caret line="32" column="20" selection-start-line="32" selection-start-column="20" selection-end-line="32" selection-end-column="20" />
-              <folding>
-                <marker date="1528390958483" expanded="false" signature="6:146" ph="..." />
-                <marker date="1528390958483" expanded="true" signature="167:876" ph="{...}" />
-                <marker date="1528390958483" expanded="true" signature="240:874" ph="{...}" />
-                <marker date="1528390958483" expanded="true" signature="360:579" ph="{...}" />
-                <marker date="1528390958483" expanded="true" signature="627:670" ph="{...}" />
-                <marker date="1528390958483" expanded="true" signature="768:796" ph="{...}" />
-                <marker date="1528390958483" expanded="true" signature="854:871" ph="{...}" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/Budget/Infrastructure/DataGrid.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Budget/Presentation/ShowCalculationUseCase/ShowCalculationUseCase.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Budget/Presentation/ShowCalculationUseCase/IShowCalculationView.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Tests/Domain/CalculationDataPreprocessorTests.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Tests/Domain/ExpenseItemTests.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Budget/Domain/IBudget.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Tests/Presentation/AddMonthlyCashMovementUseCaseTests.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Tests/_/Fakes/BudgetFake.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Tests/Domain/PeriodTests.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Budget/Presentation/AddExpenseItemUseCase/AddExpenseItemUseCase.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Tests/Domain/BudgetCalculationTests.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Tests/Domain/DatedSetTests.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/C6CD472C-9BBE-40AF-B804-70A4942895AA/fa/a9b2cb54/Assert.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Tests/Domain/YearMonthTests.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Budget/Presentation/IDataGrid.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/MyBudget/packages.config" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Budget/Domain/Budget.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Tests/Infrastructure/CalculationDataProviderTests.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Tests/Presentation/AddMonthlyCashStatementCategoryUseCaseTests.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Budget/Domain/IBudgetService.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Budget/Domain/CashStatement.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Budget/Domain/CalculationDataPreprocessor.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Budget/Domain/BudgetWeek.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Budget/Domain/YearMonth.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Budget/Domain/Week.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/MyBudget/EditExpenseItemView.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/MyBudget/MainForm.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Budget/packages.config" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Budget/Infrastructure/BudgetService.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Budget/Domain/DatedSet.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Budget/Domain/IDated.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Budget/Domain/ICalculationDataProvider.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Tests/Presentation/EditDataUseCaseFixtureBase.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Budget/Domain/MonthlyCashStatement.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Tests/packages.config" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Budget/Domain/BudgetCalculation.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Budget/Domain/MonthlyActualBalances.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/MyBudget/EditExpenseItemView.cs" />
+        <option value="$PROJECT_DIR$/Budget/Budget.csproj" />
+        <option value="$PROJECT_DIR$/MyBudget/MyBudget.csproj" />
+        <option value="$PROJECT_DIR$/Tests/packages.config" />
+        <option value="$PROJECT_DIR$/Tests/Tests.csproj" />
+        <option value="$PROJECT_DIR$/Tests/Presentation/AddMonthlyCashMovementUseCaseTests.cs" />
+        <option value="$PROJECT_DIR$/Tests/Presentation/AddMonthlyCashStatementCategoryUseCaseTests.cs" />
+        <option value="$PROJECT_DIR$/Tests/Presentation/EditDataUseCaseFixtureBase.cs" />
+        <option value="$PROJECT_DIR$/MyBudget/MainForm.cs" />
+        <option value="$PROJECT_DIR$/Budget/Domain/IBudget.cs" />
+        <option value="$PROJECT_DIR$/Budget/Domain/MonthlyActualBalances.cs" />
+        <option value="$PROJECT_DIR$/Tests/_/Fakes/BudgetFake.cs" />
+        <option value="$PROJECT_DIR$/Budget/Presentation/ShowCalculationUseCase/ShowCalculationUseCase.cs" />
+        <option value="$PROJECT_DIR$/Tests/Domain/PeriodTests.cs" />
+        <option value="$PROJECT_DIR$/Budget/Domain/Week.cs" />
+        <option value="$PROJECT_DIR$/Budget/Domain/Budget.cs" />
+        <option value="$PROJECT_DIR$/Budget/Domain/YearMonth.cs" />
+        <option value="$PROJECT_DIR$/Tests/Domain/BudgetCalculationTests.cs" />
+        <option value="$PROJECT_DIR$/Budget/Domain/BudgetCalculation.cs" />
+        <option value="$PROJECT_DIR$/Budget/Domain/BudgetWeek.cs" />
       </list>
     </option>
   </component>
-  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
-  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
-  <component name="JsGulpfileManager">
-    <detection-done>true</detection-done>
-    <sorting>DEFINITION_ORDER</sorting>
-  </component>
-  <component name="ProjectFrameBounds">
-    <option name="y" value="23" />
-    <option name="width" value="1680" />
-    <option name="height" value="971" />
-  </component>
-  <component name="ProjectView">
-    <navigator currentView="SolutionExplorer" proportions="" version="1">
-      <foldersAlwaysOnTop value="true" />
-    </navigator>
-    <panes>
-      <pane id="Scratches" />
-      <pane id="SolutionExplorer">
-        <subPane>
-          <expand>
-            <path>
-              <item name="" type="13324e5d:SolutionExplorerViewPane$ProjectViewPaneTreeStructure$createRoot$1" />
-              <item name="MyBudget (3 projects)" type="977d5f41:SolutionExplorerNodeRider" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-        <option name="show-file-system" value="false" />
-        <option name="show-all-items" value="false" />
-      </pane>
-    </panes>
+  <component name="ProjectId" id="1ZleQyQ7rfPYKfbvvpyeVvxQzBG" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
   </component>
   <component name="PropertiesComponent">
+    <property name="Rider.DefaultBreakpoints.AreToggled" value="true" />
     <property name="Rider.ProjectViewActivator.IsNotFirstRun" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="settings.editor.selected.configurable" value="SolutionBuilderGeneralOptionsPageId" />
   </component>
   <component name="RunDashboard">
@@ -90,7 +133,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected=".NET Project.Default">
     <configuration name="Default" type="DotNetProject" factoryName=".NET Project">
       <option name="EXE_PATH" value="$PROJECT_DIR$/MyBudget/bin/Debug/MyBudget.exe" />
       <option name="PROGRAM_PARAMETERS" value="" />
@@ -98,12 +141,16 @@
       <option name="PASS_PARENT_ENVS" value="1" />
       <option name="USE_EXTERNAL_CONSOLE" value="0" />
       <option name="USE_MONO" value="0" />
+      <option name="RUNTIME_ARGUMENTS" value="" />
       <option name="PROJECT_PATH" value="$PROJECT_DIR$/MyBudget/MyBudget.csproj" />
       <option name="PROJECT_EXE_PATH_TRACKING" value="1" />
       <option name="PROJECT_ARGUMENTS_TRACKING" value="1" />
       <option name="PROJECT_WORKING_DIRECTORY_TRACKING" value="1" />
       <option name="PROJECT_KIND" value="Console" />
       <option name="PROJECT_TFM" value=".NETFramework,Version=v4.0" />
+      <method v="2">
+        <option name="Build" enabled="true" />
+      </method>
     </configuration>
   </component>
   <component name="TaskManager">
@@ -115,87 +162,48 @@
       <updated>1528391823297</updated>
       <workItem from="1528391825666" duration="310000" />
       <workItem from="1528392585745" duration="1250000" />
+      <workItem from="1585418097947" duration="12054000" />
     </task>
     <servers />
-  </component>
-  <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="1560000" />
-  </component>
-  <component name="TodoView">
-    <todo-panel id="selected-file">
-      <is-autoscroll-to-source value="true" />
-    </todo-panel>
-    <todo-panel id="all">
-      <are-packages-shown value="true" />
-      <is-autoscroll-to-source value="true" />
-    </todo-panel>
-  </component>
-  <component name="ToolWindowManager">
-    <frame x="0" y="23" width="1680" height="971" extended-state="0" />
-    <layout>
-      <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="right" id="Errors In Solution" order="3" />
-      <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
-      <window_info anchor="bottom" id="Unit Tests" order="7" />
-      <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Run" order="2" />
-      <window_info anchor="bottom" id="Version Control" order="7" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Terminal" order="7" />
-      <window_info anchor="bottom" id="NuGet" order="7" />
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.25274727" />
-      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Build" />
-      <window_info anchor="right" id="Database" order="3" />
-      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.3993135" />
-      <window_info id="Favorites" order="2" side_tool="true" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
-      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info anchor="bottom" id="Message" order="0" />
-    </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
-  <component name="VcsContentAnnotationSettings">
-    <option name="myLimit" value="2678400000" />
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
-  <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/MyBudget/EditExpenseItemView.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="390">
-          <caret line="30" lean-forward="true" selection-start-line="30" selection-end-line="30" />
-          <folding>
-            <marker date="1528390958483" expanded="false" signature="6:146" ph="..." />
-            <marker date="1528390958483" expanded="true" signature="167:876" ph="{...}" />
-            <marker date="1528390958483" expanded="true" signature="240:874" ph="{...}" />
-            <marker date="1528390958483" expanded="true" signature="360:579" ph="{...}" />
-            <marker date="1528390958483" expanded="true" signature="627:670" ph="{...}" />
-            <marker date="1528390958483" expanded="true" signature="768:796" ph="{...}" />
-            <marker date="1528390958483" expanded="true" signature="854:871" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/MyBudget/EditExpenseItemView.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="420">
-          <caret line="32" column="20" selection-start-line="32" selection-start-column="20" selection-end-line="32" selection-end-column="20" />
-          <folding>
-            <marker date="1528390958483" expanded="false" signature="6:146" ph="..." />
-            <marker date="1528390958483" expanded="true" signature="167:876" ph="{...}" />
-            <marker date="1528390958483" expanded="true" signature="240:874" ph="{...}" />
-            <marker date="1528390958483" expanded="true" signature="360:579" ph="{...}" />
-            <marker date="1528390958483" expanded="true" signature="627:670" ph="{...}" />
-            <marker date="1528390958483" expanded="true" signature="768:796" ph="{...}" />
-            <marker date="1528390958483" expanded="true" signature="854:871" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
+  <component name="VcsManagerConfiguration">
+    <option name="LOCAL_CHANGES_DETAILS_PREVIEW_SHOWN" value="true" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <breakpoint enabled="true" suspend="NONE" type="DotNet Exception Breakpoints">
+          <properties exception="System.Threading.ThreadAbortException" displayValue="System.Threading.ThreadAbortException" />
+          <option name="timeStamp" value="1" />
+        </breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Budget/Domain/BudgetCalculation.cs</url>
+          <line>45</line>
+          <properties documentPath="$PROJECT_DIR$/Budget/Domain/BudgetCalculation.cs" initialLine="45">
+            <startOffsets>
+              <option value="1388" />
+            </startOffsets>
+            <endOffsets>
+              <option value="1439" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="4" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

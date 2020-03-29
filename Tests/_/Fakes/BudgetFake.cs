@@ -43,6 +43,7 @@ namespace Tests.Fakes {
 		}
 
 		public int MonthlyBalance { get; set; }
+		public MonthlyActualBalances MonthlyActualBalances { get; }
 
 		public int GetRemainder(DateTime date) {
 			throw new NotImplementedException();

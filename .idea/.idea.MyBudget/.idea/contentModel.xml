@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ContentModelStore">
-    <e p="$USER_HOME$/Library/Caches/Rider2018.1/resharper-host/local/Transient/ReSharperHost/v12/SolutionCaches/_MyBudget.1276457179.00" t="ExcludeRecursive" />
+    <e p="$USER_HOME$/Library/Caches/Rider2019.2/extResources" t="IncludeRecursive" />
+    <e p="$USER_HOME$/Library/Caches/Rider2019.2/resharper-host/local/Transient/ReSharperHost/v192/SolutionCaches/_MyBudget.1516064138.00" t="ExcludeRecursive" />
+    <e p="$APPLICATION_CONFIG_DIR$/consoles/db" t="IncludeRecursive" />
+    <e p="$APPLICATION_CONFIG_DIR$/extensions" t="IncludeRecursive" />
     <e p="$PROJECT_DIR$" t="IncludeFlat">
       <e p=".nuget" t="Include">
         <e p="packages.config" t="Include" />
@@ -24,6 +27,7 @@
           <e p="IDataDeletionService.cs" t="Include" />
           <e p="IDataSavingService.cs" t="Include" />
           <e p="IDated.cs" t="Include" />
+          <e p="MonthlyActualBalances.cs" t="Include" />
           <e p="MonthlyCashStatement.cs" t="Include" />
           <e p="MonthlyCashStatementCategory.cs" t="Include" />
           <e p="Period.cs" t="Include" />
@@ -44,6 +48,7 @@
           <e p="VersionedMemento.cs" t="Include" />
         </e>
         <e p="obj" t="ExcludeRecursive" />
+        <e p="packages.config" t="Include" />
         <e p="Presentation" t="Include">
           <e p="AddExpenseItemUseCase" t="Include">
             <e p="AddExpenseItemUseCase.cs" t="Include" />
@@ -124,14 +129,12 @@
         <e p="EditTransferView.cs" t="Include" />
         <e p="EditTransferView.Designer.cs" t="Include" />
         <e p="EditTransferView.resx" t="Include" />
-        <e p="lib" t="Include">
-          <e p="StructureMap.dll" t="Include" />
-        </e>
         <e p="MainForm.cs" t="Include" />
         <e p="MainForm.Designer.cs" t="Include" />
         <e p="MainForm.resx" t="Include" />
         <e p="MyBudget.csproj" t="IncludeRecursive" />
         <e p="obj" t="ExcludeRecursive" />
+        <e p="packages.config" t="Include" />
         <e p="Program.cs" t="Include" />
         <e p="Properties" t="Include">
           <e p="AssemblyInfo.cs" t="Include" />
@@ -153,9 +156,6 @@
             <e p="BudgetFake.cs" t="Include" />
             <e p="BudgetServiceFake.cs" t="Include" />
             <e p="PersistentStorageFake.cs" t="Include" />
-          </e>
-          <e p="lib" t="Include">
-            <e p="Moq.dll" t="Include" />
           </e>
         </e>
         <e p="bin" t="ExcludeRecursive" />

@@ -30,7 +30,7 @@ namespace Tests.Presentation {
 			dataSavingServiceMock = new Mock<IDataSavingService>();
 
 			ObjectFactory.Initialize(x => {
-				x.ForRequestedType<IShowCalculationUseCase>().TheDefault.IsThis(showCalculationUseCaseMock.Object);
+				x.For<IShowCalculationUseCase>().Use(showCalculationUseCaseMock.Object);
 			});
 
 			view = new EditExpenseItemViewFake();

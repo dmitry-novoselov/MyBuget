@@ -25,6 +25,7 @@ namespace Budget.Domain {
 		public IEnumerable<MonthlyCashStatement> MonthlyCashMovements { get; internal set; }
 
 		public int MonthlyBalance { get; internal set; }
+		public MonthlyActualBalances MonthlyActualBalances { get; internal set; }
 
 		public int GetRemainder(DateTime date) {
 			var remainder = Remainders.SingleOrDefault(r => r.Date == date);

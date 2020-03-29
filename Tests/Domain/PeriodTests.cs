@@ -1,15 +1,9 @@
 ﻿using Budget.Domain;
 using NUnit.Framework;
-using Tests.Dsl;
 
 namespace Tests.Domain {
 	[TestFixture]
 	public class PeriodTests {
-
-		private static PeriodBuilder day(int day, int month, int year) {
-			return new PeriodBuilder(day, month, year);
-		}
-
 		private void AreEqual<T>(T expected, T actual) {
 			Assert.AreEqual(expected, actual);
 		}

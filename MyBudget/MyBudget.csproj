@@ -36,7 +36,10 @@
     <PlatformTarget>x86</PlatformTarget>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="StructureMap, Version=2.5.3.0, Culture=neutral, PublicKeyToken=e60ad81abae3c223, processorArchitecture=MSIL" />
+    <Reference Include="StructureMap, Version=2.6.1.0, Culture=neutral, PublicKeyToken=e60ad81abae3c223">
+      <HintPath>..\packages\structuremap.2.6.1.0\lib\StructureMap.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core">
       <RequiredTargetFramework>3.5</RequiredTargetFramework>
@@ -74,11 +77,9 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <None Include="app.config" />
+    <None Include="packages.config" />
     <None Include="Properties\DataSources\Budget.Presentation.EditPlanningSettingsUseCase.EditPlanningSettingsViewModel.datasource" />
     <None Include="Properties\lock.ico" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="lib\StructureMap.dll" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="EditExpenseItemView.resx">

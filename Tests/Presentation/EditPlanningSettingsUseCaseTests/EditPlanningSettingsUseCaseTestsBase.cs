@@ -28,7 +28,7 @@ namespace Tests.Presentation.EditPlanningSettingsUseCaseTests {
 			showCalculationUseCaseMock = new Mock<IShowCalculationUseCase>();
 
 			ObjectFactory.Initialize(x => {
-				x.ForRequestedType<IShowCalculationUseCase>().TheDefault.IsThis(showCalculationUseCaseMock.Object);
+				x.For<IShowCalculationUseCase>().Use(showCalculationUseCaseMock.Object);
 			});
 		}
 
