@@ -2,34 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3e05ccaa-ccca-4f79-9be0-2abdd05dc297" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.MyBudget/.idea/projectSettingsUpdater.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.MyBudget/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Budget/Domain/MonthlyActualBalances.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MyBudget/packages.config" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.MyBudget/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.MyBudget/.idea/contentModel.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.MyBudget/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.MyBudget/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Budget/Budget.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Budget/Budget.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Budget/Domain/Budget.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Budget/Domain/Budget.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Budget/Domain/BudgetCalculation.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Budget/Domain/BudgetCalculation.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Budget/Domain/BudgetWeek.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Budget/Domain/BudgetWeek.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Budget/Domain/IBudget.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Budget/Domain/IBudget.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Budget/Domain/Week.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Budget/Domain/Week.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Budget/Domain/YearMonth.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Budget/Domain/YearMonth.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Budget/Presentation/ShowCalculationUseCase/ShowCalculationUseCase.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Budget/Presentation/ShowCalculationUseCase/ShowCalculationUseCase.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MyBudget/MainForm.cs" beforeDir="false" afterPath="$PROJECT_DIR$/MyBudget/MainForm.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MyBudget/MyBudget.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/MyBudget/MyBudget.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tests/Domain/BudgetCalculationTests.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Tests/Domain/BudgetCalculationTests.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tests/Domain/PeriodTests.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Tests/Domain/PeriodTests.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tests/Presentation/AddMonthlyCashMovementUseCaseTests.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Tests/Presentation/AddMonthlyCashMovementUseCaseTests.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tests/Presentation/AddMonthlyCashStatementCategoryUseCaseTests.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Tests/Presentation/AddMonthlyCashStatementCategoryUseCaseTests.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tests/Presentation/EditDataUseCaseFixtureBase.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Tests/Presentation/EditDataUseCaseFixtureBase.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tests/Presentation/EditExpenseItemUseCaseTests.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Tests/Presentation/EditExpenseItemUseCaseTests.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tests/Presentation/EditPlanningSettingsUseCaseTests/EditPlanningSettingsUseCaseTestsBase.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Tests/Presentation/EditPlanningSettingsUseCaseTests/EditPlanningSettingsUseCaseTestsBase.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tests/Presentation/EditingTests/WhenEditCashStatement.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Tests/Presentation/EditingTests/WhenEditCashStatement.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tests/Presentation/EditingTests/WhenEditMonthlyCashMovement.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Tests/Presentation/EditingTests/WhenEditMonthlyCashMovement.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tests/Tests.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Tests/Tests.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tests/_/Fakes/BudgetFake.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Tests/_/Fakes/BudgetFake.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tests/packages.config" beforeDir="false" afterPath="$PROJECT_DIR$/Tests/packages.config" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -94,14 +67,14 @@
         <option value="$PROJECT_DIR$/Budget/Domain/IBudget.cs" />
         <option value="$PROJECT_DIR$/Budget/Domain/MonthlyActualBalances.cs" />
         <option value="$PROJECT_DIR$/Tests/_/Fakes/BudgetFake.cs" />
-        <option value="$PROJECT_DIR$/Budget/Presentation/ShowCalculationUseCase/ShowCalculationUseCase.cs" />
         <option value="$PROJECT_DIR$/Tests/Domain/PeriodTests.cs" />
         <option value="$PROJECT_DIR$/Budget/Domain/Week.cs" />
-        <option value="$PROJECT_DIR$/Budget/Domain/Budget.cs" />
         <option value="$PROJECT_DIR$/Budget/Domain/YearMonth.cs" />
+        <option value="$PROJECT_DIR$/Budget/Domain/BudgetWeek.cs" />
+        <option value="$PROJECT_DIR$/Budget/Domain/Budget.cs" />
         <option value="$PROJECT_DIR$/Tests/Domain/BudgetCalculationTests.cs" />
         <option value="$PROJECT_DIR$/Budget/Domain/BudgetCalculation.cs" />
-        <option value="$PROJECT_DIR$/Budget/Domain/BudgetWeek.cs" />
+        <option value="$PROJECT_DIR$/Budget/Presentation/ShowCalculationUseCase/ShowCalculationUseCase.cs" />
       </list>
     </option>
   </component>
@@ -162,7 +135,7 @@
       <updated>1528391823297</updated>
       <workItem from="1528391825666" duration="310000" />
       <workItem from="1528392585745" duration="1250000" />
-      <workItem from="1585418097947" duration="12054000" />
+      <workItem from="1585418097947" duration="14454000" />
     </task>
     <servers />
   </component>
@@ -190,19 +163,6 @@
           <properties exception="System.Threading.ThreadAbortException" displayValue="System.Threading.ThreadAbortException" />
           <option name="timeStamp" value="1" />
         </breakpoint>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/Budget/Domain/BudgetCalculation.cs</url>
-          <line>45</line>
-          <properties documentPath="$PROJECT_DIR$/Budget/Domain/BudgetCalculation.cs" initialLine="45">
-            <startOffsets>
-              <option value="1388" />
-            </startOffsets>
-            <endOffsets>
-              <option value="1439" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="4" />
-        </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
   </component>
