@@ -95,7 +95,7 @@ namespace Budget.Presentation.ShowCalculationUseCase {
 			var monthToBalance = budget.Remainders.LastOrDefault()?.Date ?? DateTimeService.Now();
 			var actualBalance = budget.MonthlyActualBalances.GetFor(monthToBalance);
 			var budgetBalance = budget.MonthlyBalance;
-			view.MonthlyBalance = $"Баланс: {actualBalance:+#;#} / {budgetBalance:+#;#}";
+			view.MonthlyBalance = $"Баланс: {actualBalance:+#;-#} / {budgetBalance:+#;-#}";
 
 			return currentWeek;
 		}
