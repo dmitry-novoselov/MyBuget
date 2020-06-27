@@ -4,7 +4,6 @@ using System;
 using System.Collections.Generic;
 using System.Drawing;
 using System.Linq;
-using System.Net.Sockets;
 using Budget.Domain;
 using Budget.Presentation.EditCashMovementUseCase;
 using Budget.Presentation.EditExpenseItemUseCase;
@@ -93,9 +92,10 @@ namespace Budget.Presentation.ShowCalculationUseCase {
 			view.CalculationResults.DataSource = new List<PEBudgetRow>(dataSource.Values);
 
 			var monthToBalance = budget.Remainders.LastOrDefault()?.Date ?? DateTimeService.Now();
-			var actualBalance = budget.MonthlyActualBalances.GetFor(monthToBalance);
-			var budgetBalance = budget.MonthlyBalance;
-			view.MonthlyBalance = $"Баланс: {actualBalance:+#;-#} / {budgetBalance:+#;-#}";
+			var balance = budget.MonthlyActualBalances.GetFor(monthToBalance);
+			var nextMonth = monthToBalance.AddMonths(1);
+			var nextMonthBalance = budget.MonthlyActualBalances.GetFor(nextMonth);
+			view.MonthlyBalance = $"{monthToBalance:MMM}: {balance:+#;-#}, {nextMonth:MMM}: {nextMonthBalance:+#;-#}";
 
 			return currentWeek;
 		}
