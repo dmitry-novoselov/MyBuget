@@ -2,6 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3e05ccaa-ccca-4f79-9be0-2abdd05dc297" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.MyBudget/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.MyBudget/.idea/contentModel.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.MyBudget/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.MyBudget/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Budget/Presentation/ShowCalculationUseCase/ShowCalculationUseCase.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Budget/Presentation/ShowCalculationUseCase/ShowCalculationUseCase.cs" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -14,12 +16,17 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/Budget/Presentation/EditPlanningSettingsUseCase/EditPlanningSettingsUseCase.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Budget/Presentation/EditPlanningSettingsUseCase/EditPlanningSettingsViewModel.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Tests/Presentation/CalculationDataProviderExtensions.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Budget/Infrastructure/DataGrid.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Budget/Infrastructure/CalculationDataProvider.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Budget/Presentation/ShowCalculationUseCase/ShowCalculationUseCase.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Budget/Presentation/ShowCalculationUseCase/IShowCalculationView.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Tests/Domain/CalculationDataPreprocessorTests.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Tests/Domain/ExpenseItemTests.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Budget/Domain/IBudget.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Budget/Utils/Set.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Tests/Presentation/AddMonthlyCashMovementUseCaseTests.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Tests/_/Fakes/BudgetFake.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Tests/Domain/PeriodTests.cs" root0="FORCE_HIGHLIGHTING" />
@@ -34,23 +41,28 @@
     <setting file="file://$PROJECT_DIR$/Tests/Infrastructure/CalculationDataProviderTests.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Tests/Presentation/AddMonthlyCashStatementCategoryUseCaseTests.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Budget/Domain/IBudgetService.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Tests/Presentation/ShowCalculationUseCaseTests/ShowCalculationUseCaseTests_Fixture.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Budget/Domain/CashStatement.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Budget/Domain/CalculationDataPreprocessor.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Budget/Domain/BudgetWeek.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Tests/Infrastructure/MementoTests.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Budget/Domain/YearMonth.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Budget/Domain/Week.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Tests/Presentation/ShowCalculationUseCaseTests/WhenDisplayingShowCalculationUseCase.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/MyBudget/EditExpenseItemView.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/MyBudget/MainForm.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Budget/packages.config" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Budget/Infrastructure/BudgetService.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Budget/Domain/DatedSet.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Budget/Infrastructure/BudgetService.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Budget/Domain/IDated.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Budget/Domain/ICalculationDataProvider.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Tests/Presentation/EditDataUseCaseFixtureBase.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/MyBudget/Program.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Budget/Domain/MonthlyCashStatement.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Tests/packages.config" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Budget/Domain/BudgetCalculation.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Tests/packages.config" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Budget/Domain/MonthlyActualBalances.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Budget/Infrastructure/VersionedMemento.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -74,6 +86,7 @@
         <option value="$PROJECT_DIR$/Budget/Domain/Budget.cs" />
         <option value="$PROJECT_DIR$/Tests/Domain/BudgetCalculationTests.cs" />
         <option value="$PROJECT_DIR$/Budget/Domain/BudgetCalculation.cs" />
+        <option value="$PROJECT_DIR$/Tests/Infrastructure/MementoTests.cs" />
         <option value="$PROJECT_DIR$/Budget/Presentation/ShowCalculationUseCase/ShowCalculationUseCase.cs" />
       </list>
     </option>
@@ -106,7 +119,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected=".NET Project.Default">
+  <component name="RunManager">
     <configuration name="Default" type="DotNetProject" factoryName=".NET Project">
       <option name="EXE_PATH" value="$PROJECT_DIR$/MyBudget/bin/Debug/MyBudget.exe" />
       <option name="PROGRAM_PARAMETERS" value="" />
@@ -135,19 +148,33 @@
       <updated>1528391823297</updated>
       <workItem from="1528391825666" duration="310000" />
       <workItem from="1528392585745" duration="1250000" />
-      <workItem from="1585418097947" duration="14454000" />
+      <workItem from="1585418097947" duration="17094000" />
+      <workItem from="1591462888808" duration="2438000" />
+      <workItem from="1593289780296" duration="681000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
+  <component name="Vcs.Log.History.Properties">
+    <option name="COLUMN_ORDER">
+      <list>
+        <option value="0" />
+        <option value="2" />
+        <option value="3" />
+        <option value="1" />
+      </list>
+    </option>
+  </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
           </value>
         </entry>
       </map>
@@ -163,6 +190,32 @@
           <properties exception="System.Threading.ThreadAbortException" displayValue="System.Threading.ThreadAbortException" />
           <option name="timeStamp" value="1" />
         </breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/MyBudget/MainForm.cs</url>
+          <line>41</line>
+          <properties documentPath="$PROJECT_DIR$/MyBudget/MainForm.cs" initialLine="41">
+            <startOffsets>
+              <option value="1441" />
+            </startOffsets>
+            <endOffsets>
+              <option value="1465" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="3" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/MyBudget/MainForm.cs</url>
+          <line>38</line>
+          <properties documentPath="$PROJECT_DIR$/MyBudget/MainForm.cs" initialLine="38">
+            <startOffsets>
+              <option value="1339" />
+            </startOffsets>
+            <endOffsets>
+              <option value="1380" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="4" />
+        </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
   </component>
