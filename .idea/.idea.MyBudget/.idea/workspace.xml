@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3e05ccaa-ccca-4f79-9be0-2abdd05dc297" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.MyBudget/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.MyBudget/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.MyBudget/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.MyBudget/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Budget/Presentation/ShowCalculationUseCase/ShowCalculationUseCase.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Budget/Presentation/ShowCalculationUseCase/ShowCalculationUseCase.cs" afterDir="false" />
     </list>
@@ -150,7 +149,10 @@
       <workItem from="1528392585745" duration="1250000" />
       <workItem from="1585418097947" duration="17094000" />
       <workItem from="1591462888808" duration="2438000" />
-      <workItem from="1593289780296" duration="681000" />
+      <workItem from="1593289780296" duration="1030000" />
+      <workItem from="1593345596999" duration="731000" />
+      <workItem from="1604841102582" duration="690000" />
+      <workItem from="1604841850275" duration="1550000" />
     </task>
     <servers />
   </component>
