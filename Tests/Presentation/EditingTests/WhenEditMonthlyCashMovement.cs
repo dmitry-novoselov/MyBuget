@@ -33,7 +33,7 @@ namespace Tests.Presentation.EditingTests {
 				x.For<IShowCalculationUseCase>().Use(showCalculationUseCaseMock.Object);
 			});
 
-			dataProvider = new CalculationDataProvider(new PersistentStorageFake());
+			dataProvider = new CalculationDataProvider(new PersistentStorageFake(), new PersistentStorageFake());
 		}
 
 		private void Run() {

@@ -2,6 +2,7 @@
 
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using Budget.Domain;
 
 #endregion
@@ -12,19 +13,28 @@ namespace Budget.Infrastructure {
 		private readonly IMemento memento;
 		private readonly DataContainer2 data;
 
-		public CalculationDataProvider(IMemento memento) {
+		public CalculationDataProvider(IMemento memento, IMemento backupMemento) {
 			this.memento = memento;
-			this.data = (DataContainer2)memento.Get(new DataContainer2());
+			
+			data = (DataContainer2)memento.Get(new DataContainer2());
+			backupMemento.Set(data);
 		}
 
 		public Period CalculationPeriod {
 			get { return data.CalculationPeriod; }
-			set { data.CalculationPeriod = value; }
+			set {
+				data.CalculationPeriod = value;
+				CleanupOldData();
+				Save();
+			}
 		}
 
 		public int EnvelopeSize {
 			get { return data.EnvelopeSize; }
-			set { data.EnvelopeSize = value; }
+			set {
+				data.EnvelopeSize = value;
+				Save();
+			}
 		}
 
 		public void SetRemainder(DateTime date, int amount) {
@@ -96,6 +106,16 @@ namespace Budget.Infrastructure {
 		private void Delete<T>(List<T> list, T item) {
 			list.Remove(item);
 			Save();
+		}
+
+		private void CleanupOldData()
+		{
+			var cutoffDate = data.CalculationPeriod.From.AddDays(-1);
+
+			data.Remainders.RemoveAll(x => x.Date < cutoffDate);
+			data.CashMovements.RemoveAll(x => x.Date < cutoffDate);
+			data.MonthlyCashMovements.RemoveAll(x => x.Date < cutoffDate);
+			data.MonthlyCashStatementCategories.RemoveAll(x => !data.MonthlyCashMovements.Any(y => y.Category == x));
 		}
 	}
 }

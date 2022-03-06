@@ -7,7 +7,6 @@ using StructureMap;
 using Tests.Presentation.Fakes;
 using Tests.Fakes;
 using Budget.Domain;
-using System;
 
 namespace Tests.Presentation {
 	[TestFixture]
@@ -28,7 +27,7 @@ namespace Tests.Presentation {
 			});
 
 			view = new EditExpenseItemViewFake();
-			dataProvider = new CalculationDataProvider(new PersistentStorageFake());
+			dataProvider = new CalculationDataProvider(new PersistentStorageFake(), new PersistentStorageFake());
 		}
 
 		private void Run() {

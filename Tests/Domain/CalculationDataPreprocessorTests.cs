@@ -1,10 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Linq;
 using Budget.Domain;
 using Budget.Infrastructure;
 using NUnit.Framework;
-using Tests.Dsl;
 using Tests.Fakes;
 
 namespace Tests.Domain {
@@ -14,7 +12,7 @@ namespace Tests.Domain {
 
 		[SetUp]
 		public void SetUp() {
-			dataProvider = new CalculationDataProvider(new PersistentStorageFake());
+			dataProvider = new CalculationDataProvider(new PersistentStorageFake(), new PersistentStorageFake());
 			dataProvider.CalculationPeriod = new Period(DateTime.MinValue, DateTime.MinValue);
 		}
 

@@ -12,7 +12,7 @@ namespace Tests.Domain {
 
 		[SetUp]
 		public void SetUp() {
-			dataProvider = new CalculationDataProvider(new PersistentStorageFake());
+			dataProvider = new CalculationDataProvider(new PersistentStorageFake(), new PersistentStorageFake());
 		}
 
 		private int EnvelopeSize {

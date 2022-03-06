@@ -48,7 +48,7 @@ namespace Budget.Infrastructure {
 		}
 
 		private void DeleteOld() {
-			foreach (var filePathToDelete in FilePaths.Skip(10)) {
+			foreach (var filePathToDelete in FilePaths.Skip(20)) {
 				File.Delete(filePathToDelete);
 			}
 		}

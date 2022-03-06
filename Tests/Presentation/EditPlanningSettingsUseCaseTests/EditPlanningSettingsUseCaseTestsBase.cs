@@ -23,7 +23,7 @@ namespace Tests.Presentation.EditPlanningSettingsUseCaseTests {
 		[SetUp]
 		public void MakeUseCaseRunnable() {
 			view = new ModelViewFake<EditPlanningSettingsViewModel>();
-			dataProvider = new CalculationDataProvider(new PersistentStorageFake());
+			dataProvider = new CalculationDataProvider(new PersistentStorageFake(), new PersistentStorageFake());
 
 			showCalculationUseCaseMock = new Mock<IShowCalculationUseCase>();
 

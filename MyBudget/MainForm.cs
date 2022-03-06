@@ -25,21 +25,21 @@ using StructureMap;
 
 namespace MyBudget {
 	public partial class MainForm : Form, IShowCalculationView, IModelView<EditPlanningSettingsViewModel> {
-		private CalculationDataProvider dataProvider;
-
 		public MainForm() {
 			InitializeComponent();
 		}
 
 		private void MainForm_Load(object sender, EventArgs e) {
 //			var path = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.CommonApplicationData), "MyBudget");
-			var programLocation = Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location);
-			var path = Path.Combine(programLocation, "Data");
+			var pathProgramLocation = Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location);
+			var pathDataLocation = Path.Combine(pathProgramLocation, "Data");
+			var pathBackupLocation = Path.Combine(pathDataLocation, "Backup");
 
-			var memento = new VersionedMemento(path);
-			dataProvider = new CalculationDataProvider(memento);
+			var dataMemento = new VersionedMemento(pathDataLocation);
+			var backupMemento = new VersionedMemento(pathBackupLocation);
 
-			ConfigureStructureMap();
+			var dataProvider = new CalculationDataProvider(dataMemento, backupMemento);
+			ConfigureStructureMap(dataProvider);
 
 			Run();
 			SetColumnWidths();
@@ -50,7 +50,7 @@ namespace MyBudget {
 			ObjectFactory.GetInstance<IEditPlanningSettingsUseCase>().Run();
 		}
 
-		private void ConfigureStructureMap() {
+		private void ConfigureStructureMap(CalculationDataProvider dataProvider) {
 			ObjectFactory.Initialize(x => {
 				x.For<ICalculationDataProvider>().Use(dataProvider);
 				x.For<IDataDeletionService>().Use(dataProvider);
@@ -139,5 +139,5 @@ namespace MyBudget {
 			CalculationResults.SelectedItem.Delete();
 			ObjectFactory.GetInstance<IShowCalculationUseCase>().Run();
 		}
-	}
+    }
 }

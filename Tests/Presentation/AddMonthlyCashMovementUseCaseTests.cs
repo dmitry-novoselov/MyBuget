@@ -34,7 +34,7 @@ namespace Tests.Presentation {
 			});
 
 			view = new EditMonthlyExpenseViewFake();
-			dataProvider = new CalculationDataProvider(new PersistentStorageFake());
+			dataProvider = new CalculationDataProvider(new PersistentStorageFake(), new PersistentStorageFake());
 		}
 
 		private void Run() {

@@ -3,11 +3,12 @@ using Budget.Infrastructure;
 using Moq;
 using NUnit.Framework;
 using Budget.Domain;
+using Tests.Fakes;
 
 namespace Tests.Infrastructure {
 	[TestFixture]
 	public class CalculationDataProviderTests : FixtureBase {
-		private Mock<IMemento> persistentStorageMock;
+		private Mock<IMemento> mementoMock;
 		private CalculationDataProvider dataProvider;
 		private DataContainer2 dataContainer;
 
@@ -15,12 +16,12 @@ namespace Tests.Infrastructure {
 		public void SetUp() {
 			dataContainer = new DataContainer2();
 
-			persistentStorageMock = new Mock<IMemento>(MockBehavior.Loose);
-			persistentStorageMock
+			mementoMock = new Mock<IMemento>(MockBehavior.Loose);
+			mementoMock
 				.Setup(m => m.Get(It.IsAny<DataContainer2>()))
 				.Returns(dataContainer);
 
-			dataProvider = new CalculationDataProvider(persistentStorageMock.Object);
+			dataProvider = new CalculationDataProvider(mementoMock.Object, new PersistentStorageFake());
 		}
 
 		[Test]
@@ -28,7 +29,7 @@ namespace Tests.Infrastructure {
 			dataProvider.SetRemainder(1.01.of2009(), 10);
 			dataProvider.SetRemainder(1.01.of2009(), 20);
 
-			persistentStorageMock.Verify(x => x.Set(dataContainer), Times.Exactly(2));
+			mementoMock.Verify(x => x.Set(dataContainer), Times.Exactly(2));
 			AreEqual(1, dataProvider.GetRemainders().Count);
 			AreEqual(1.01.of2009(), dataProvider.GetRemainders()[0].Date);
 			AreEqual(20, dataProvider.GetRemainders()[0].Amount);
@@ -38,7 +39,7 @@ namespace Tests.Infrastructure {
 		public void AddExpenseItem() {
 			dataProvider.AddExpenseItem(1, 10, "Gaz");
 
-			persistentStorageMock.Verify(x => x.Set(dataContainer), Times.Exactly(1));
+			mementoMock.Verify(x => x.Set(dataContainer), Times.Exactly(1));
 			CollectionAssert.AreEqual(
 				new[] { new MonthlyCashStatementCategory(1, 10, "Gaz") },
 				dataProvider.GetMonthlyCashStatementCategories());
@@ -50,7 +51,7 @@ namespace Tests.Infrastructure {
 			var gaz = dataProvider.GetMonthlyCashStatementCategories()[0];
 			dataProvider.AddMonthlyCashStatement(gaz, month(1), 01.01.of2009(), 20, "tourne");
 
-			persistentStorageMock.Verify(x => x.Set(dataContainer), Times.Exactly(2));
+			mementoMock.Verify(x => x.Set(dataContainer), Times.Exactly(2));
 			CollectionAssert.AreEqual(
 				new[] { new MonthlyCashStatement(gaz, month(1), 01.01.of2009(), 20, "tourne") },
 			    dataProvider.GetMonthlyCashMovements());
@@ -66,7 +67,7 @@ namespace Tests.Infrastructure {
 
 			dataProvider.DeleteCashMovement(investment1);
 
-			persistentStorageMock.Verify(x => x.Set(dataContainer), Times.Exactly(3));
+			mementoMock.Verify(x => x.Set(dataContainer), Times.Exactly(3));
 			CollectionAssert.AreEqual(
 				new[] { investment2 },
 				dataProvider.GetCashMovements());
@@ -81,7 +82,7 @@ namespace Tests.Infrastructure {
 
 			dataProvider.DeleteMonthlyCashMovement(dataProvider.GetMonthlyCashMovements()[0]);
 
-			persistentStorageMock.Verify(x => x.Set(dataContainer), Times.Exactly(4));
+			mementoMock.Verify(x => x.Set(dataContainer), Times.Exactly(4));
 			CollectionAssert.AreEqual(
 				new[] { new MonthlyCashStatement(gaz, month(1), 01.01.of2009(), 20, "tourne2") },
 				dataProvider.GetMonthlyCashMovements());
@@ -97,7 +98,7 @@ namespace Tests.Infrastructure {
 
 			dataProvider.DeleteRemainder(remainder1);
 
-			persistentStorageMock.Verify(x => x.Set(dataContainer), Times.Exactly(3));
+			mementoMock.Verify(x => x.Set(dataContainer), Times.Exactly(3));
 			CollectionAssert.AreEqual(
 				new[] { remainder2 },
 				dataProvider.GetRemainders());
@@ -107,7 +108,7 @@ namespace Tests.Infrastructure {
 		public void SetWalletRemainders() {
 			dataProvider.WalletRemainders = "100";
 
-			persistentStorageMock.Verify(x => x.Set(dataContainer), Times.Exactly(1));
+			mementoMock.Verify(x => x.Set(dataContainer), Times.Exactly(1));
 		}
 	}
 }
